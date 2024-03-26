@@ -18,4 +18,10 @@ describe('./musicians endpoint', () => {
         const response = await request(app).get("/musicians");
         expect(response.statusCode).toBe(200);
     })
+
+    it("has an id endpoint", async () => {
+        // Sends request to `/musicians/:id` endpoint
+        const response = await request(app).get("/musicians/:id");
+        expect(response.statusCode).toBe(200);
+    })
 })
